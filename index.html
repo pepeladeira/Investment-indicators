@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Indicadores Financeiros</title>
+  </head>
+
+  <body>
+    <section class="intro">
+        <h1>Indicadores Financeiros</h1>
+        <p>Informe os dados solicitados e obtenha os principais indicadores de uma empresa/ação.</p>
+        <!-- <p>Caso não saiba alguma informação que está sendo requisitada, basta clicar no ícone: &#10068;</p> -->
+        <a href="#pegar-dados">
+            <button>Ver Indicadores</button>
+        </a>
+        <img src="./character.png" alt="chart">
+    </section>  
+
+    <section id="pegar-dados">
+        <h2>Preencha os campos abaixo:</h2>
+        <p>Não digite os seguintes caracteres: <span>. , + - </span></p>
+        <div class="row">
+            <div class="row-inside">
+              <label for="currentStockPrice">Preço Atual da Ação:</label>
+              <input type="number" name="currentStockPrice" id="currentStockPrice">
+            </div>
+
+            <div class="row-inside">
+              <label for="amountOfStocks">Número de Ações em Circulação:</label>
+              <input type="number" name="amountOfStocks" id="amountOfStocks">
+            </div>
+
+            <div class="row-inside">
+              <label for="equity">Patrimônio Líquido:</label>
+              <input type="number" name="equity" id="equity">
+            </div>
+
+            <div class="row-inside">
+              <label for="ebit">EBITDA:</label>
+              <input type="number" name="ebit" id="ebit">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="row-inside">
+              <label for="totalAssets">Ativo Total:</label>
+              <input type="number" name="totalAssets" id="totalAssets">
+            </div>
+            <div class="row-inside">
+              <label for="currentAssets">Ativo Circulante:</label>
+              <input type="number" name="currentAssets" id="currentAssets">
+            </div>
+            <div class="row-inside">
+              <label for="NonCurrentAssets">Ativo Não Circulante:</label>
+              <input type="number" name="NonCurrentAssets" id="NonCurrentAssets">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="row-inside">
+              <label for="totalLiabilities">Passivo Total:</label>
+              <input type="number" name="totalLiabilities" id="totalLiabilities">
+            </div>
+            <div class="row-inside">
+              <label for="currentLiabilities">Passivo Circulante:</label>
+              <input type="number" name="currentLiabilities" id="currentLiabilities">
+            </div>
+            <div class="row-inside">
+              <label for="NonCurrentLiabilities">Passivo Não Circulante:</label>
+              <input type="number" name="NonCurrentLiabilities" id="NonCurrentLiabilities">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="row-inside">
+              <label for="grossProfits">Lucro Bruto:</label>
+              <input type="number" name="grossProfits" id="grossProfits">
+            </div>
+            <div class="row-inside">
+              <label for="netProfits">Lucro Líquido:</label>
+              <input type="number" name="netProfits" id="netProfits">
+            </div>
+            <div class="row-inside">
+              <label for="netRevenue">Receita Líquida:</label>
+              <input type="number" name="netRevenue" id="netRevenue">
+            </div>
+        </div>
+
+        <button class="btn-indicadores" onclick="displayIndicators()">Gerar Indicadores</button>
+    </section>
+
+    <section class="todos-indicadores" id="todos-indicadores">
+        <div class="indicador">
+            <p>Margem Bruta:</p>
+            <p id="margem-bruta"></p>
+        </div>
+        <div class="indicador">
+            <p>Margem Líquida:</p>
+            <p id="margem-liquida"></p>
+        </div>
+        <div class="indicador">
+            <p>Margem EBITDA:</p>
+            <p id="margem-ebitda"></p>
+        </div>
+        <div class="indicador">
+            <p>Liquidez Corrente:</p>
+            <p id="liquidez-corrente"></p>
+        </div>
+        <div class="indicador">
+            <p>LPA:</p>
+            <p id="lucro-por-acao"></p>
+        </div>
+        <div class="indicador">
+            <p>P/L:</p>
+            <p id="preco-sobre-lucro"></p>
+        </div>
+        <div class="indicador">
+            <p>VPA:</p>
+            <p id="valor-por-acao"></p>
+        </div>
+        <div class="indicador">
+            <p>P/VPA:</p>
+            <p id="preco-sobre-vpa"></p>
+        </div>
+        <div class="indicador">
+            <p>Enterprise Value:</p>
+            <p id="valor-de-mercado"></p>
+        </div>
+        <div class="indicador">
+            <p>EV/EBITDA:</p>
+            <p id="ev-sobre-ebitda"></p>
+        </div>
+        <div class="indicador">
+            <p>Dív. Líq/Equity:</p>
+            <p id="div-sobre-equity"></p>
+        </div>
+        <div class="indicador">
+            <p>Dív. Líq/EBITDA:</p>
+            <p id="div-sobre-ebitda"></p>
+        </div>
+        <div class="indicador">
+            <p>Capital de Giro:</p>
+            <p id="capital-de-giro"></p>
+        </div>
+        <div class="indicador">
+            <p>ROE:</p>
+            <p id="roe"></p>
+        </div>
+        <div class="indicador">
+            <p>ROA:</p>
+            <p id="roa"></p>
+        </div>
+        <div class="indicador">
+            <p>ROIC:</p>
+            <p id="roic"></p>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
