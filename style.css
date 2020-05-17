@@ -172,15 +172,14 @@ input[type=number]:focus {
     justify-items: center;
 }
 
-/*@media only screen and (max-width: 590px){
-    .todos-indicadores{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-}*/
 
 #todos-indicadores{
     display: none;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    background: white;
+    border-top: 1.5px solid #5271FF;
 }
